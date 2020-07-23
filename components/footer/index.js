@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Twitter } from '../icons'
 import {
-  NAME_SHORT,
+  LLC_NAME,
   ADDRESS_TOP,
   ADDRESS_BOTTOM,
   TWITTER_USER_NAME,
@@ -34,7 +34,7 @@ export default function Footer() {
           </span>
 
           <p>
-            Copyright © {`${new Date().getFullYear()}`} {NAME_SHORT}, Inc. All rights reserved.
+            Copyright © {`${new Date().getFullYear()}`} {LLC_NAME}, All rights reserved.
           </p>
         </div>
 
