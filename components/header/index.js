@@ -17,7 +17,7 @@ const Header = ({ sticky = true }) => {
           justify-content: space-around;
           align-items: center;
           width: 100%;
-          background: #fff;
+          background: var(--accents-4);
           z-index: 1000;
           border-bottom: 1px solid #eaeaea;
         }
