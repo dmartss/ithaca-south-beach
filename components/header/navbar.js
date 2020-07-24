@@ -99,6 +99,11 @@ function Navbar() {
           transition: color 0.2s ease;
         }
 
+        .links a:first-child {
+          display: flex;
+          margin: 0;
+        }
+
         .links a:hover {
           color: var(--accents-3);
         }
