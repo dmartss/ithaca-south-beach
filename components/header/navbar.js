@@ -99,7 +99,7 @@ function Navbar() {
           transition: color 0.2s ease;
         }
 
-        .links a:first-child {
+        .links > a.logo {
           display: flex;
           margin: 0;
         }
