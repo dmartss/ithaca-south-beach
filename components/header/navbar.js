@@ -2,6 +2,7 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import cn from 'classnames'
+import { EMAIL_ADDRESS, PHONE_NUMBER } from 'lib/constants'
 
 import Logo from 'components/icons/logo'
 import Container from 'components/container'
@@ -11,7 +12,7 @@ function Navbar() {
   const { route } = useRouter()
 
   return (
-    <Container center>
+    <Container wide center>
       <nav className="f-reset">
         <div className="mobile-top">
           <Link href="/">
@@ -32,21 +33,33 @@ function Navbar() {
             </a>
           </Link>
 
-          <Link href="/">
-            <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
-              Rooms
-            </a>
-          </Link>
+          <div className="urls">
+            <Link href="/">
+              <a className={cn('mute', { selected: route.startsWith('/rooms') })} title="Rooms">
+                Rooms
+              </a>
+            </Link>
 
-          <Link href="/">
-            <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
-              About
-            </a>
-          </Link>
+            <Link href="/">
+              <a className={cn('mute', { selected: route.startsWith('/about') })} title="About">
+                About
+              </a>
+            </Link>
+
+            <Link href="/">
+              <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
+                Photos
+              </a>
+            </Link>
+          </div>
 
           <div className="book">
             <Button href="/">Book</Button>
           </div>
+        </div>
+        <div className="right">
+          <p>{PHONE_NUMBER}</p>
+          <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
         </div>
       </nav>
 
@@ -57,6 +70,7 @@ function Navbar() {
           display: flex;
           align-items: center;
           height: var(--header-height);
+          margin: 0 3rem;
         }
 
         .links {
@@ -67,11 +81,22 @@ function Navbar() {
           z-index: 1;
         }
 
+        .urls {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          z-index: 1;
+        }
+
+        .urls a {
+          margin-right: 2rem;
+        }
+
         .links a {
           color: var(--accents-1);
           text-decoration: none;
           transition: color 0.2s ease;
-          margin-left: 1rem;
         }
 
         .links a:hover {
@@ -81,11 +106,6 @@ function Navbar() {
         .links a.selected {
           color: var(--accents-2);
           text-shadow: 0px 0px 1px #0070f3;
-        }
-
-        .links a:first-child {
-          display: flex;
-          margin: 0;
         }
 
         a.icon,
@@ -114,6 +134,17 @@ function Navbar() {
         .book :global(a:focus),
         .book :global(a:hover) {
           background-color: transparent;
+          color: var(--accents-1);
+        }
+
+        .right {
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 1rem;
+          margin-bottom: 1rem;
+          line-height: 0.25;
           color: var(--accents-1);
         }
 
