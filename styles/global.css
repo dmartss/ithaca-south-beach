@@ -227,7 +227,6 @@ details {
 
 img {
   max-width: 100%;
-  width: var(--main-content);
   width: auto;
   margin: auto;
   display: block;
