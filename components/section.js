@@ -24,6 +24,6 @@ export default withPure(({ description, margin = '0 0 5rem 0', reverse, children
       `}
     </style>
     {children}
-    {description && <p className="f-reset subtitle fw4">{description}</p>}
+    {description && <p className="f-reset mute fw4">{description}</p>}
   </div>
 ))
