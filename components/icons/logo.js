@@ -1,8 +1,8 @@
 export default ({ className }) => (
   <svg
     className={className}
-    height="75"
-    width="75"
+    height="60"
+    width="60"
     viewBox="0 0 400 400"
     xmlns="http://www.w3.org/2000/svg"
   >
