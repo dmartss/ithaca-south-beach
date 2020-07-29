@@ -12,7 +12,7 @@ export default function Rooms() {
         {rooms.map(({ name, type, occupancy, quantity, description, images }) => (
           <div className="room" key={name}>
             <h3 className="mute fw3">{name}</h3>
-            <div className="info subtitle">
+            <div className="info subtitle fw3">
               {type && <h5 className="fw3">Type: {type}</h5>}
               {occupancy && <h5 className="fw3">Occupancy: {occupancy}</h5>}
               {quantity && <h5 className="fw3"># of Rooms: {quantity}</h5>}
@@ -35,8 +35,11 @@ export default function Rooms() {
             </div>
             <style jsx>{`
               .room {
-                padding-bottom: 3rem;
+                padding-bottom: var(--gap-double);
+              }
+              .room:not(:first-of-type) {
                 border-top: 1px solid #efefef;
+                padding-top: var(--gap-double);
               }
               .info {
                 display: flex;
@@ -46,21 +49,19 @@ export default function Rooms() {
 
               .images {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : 'auto'};
               }
 
-               {
-                /* .images > :global(figure):nth-last-child(1):nth-child(even) {
+              .images > :global(figure):nth-last-child(1):nth-child(even) {
                 grid-column: 2;
-              } */
               }
 
               @media (max-width: 960px) {
-                .room {
-                  padding-top: 1rem;
-                }
                 .images {
                   grid-template-columns: auto;
+                }
+                .images > :global(figure):nth-last-child(1):nth-child(even) {
+                  grid-column: 1;
                 }
               }
             `}</style>
