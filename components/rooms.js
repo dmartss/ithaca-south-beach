@@ -49,7 +49,7 @@ export default function Rooms() {
 
               .images {
                 display: grid;
-                grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : 'auto'};
+                grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : '1fr 1fr'};
               }
 
               .images > :global(figure):nth-last-child(1):nth-child(odd) {
@@ -58,9 +58,9 @@ export default function Rooms() {
 
               @media (max-width: 960px) {
                 .images {
-                  grid-template-columns: auto;
+                  grid-template-columns: 1fr;
                 }
-                .images > :global(figure):nth-last-child(1):nth-child(even) {
+                .images > :global(figure):nth-last-child(1):nth-child(odd) {
                   grid-column: 1;
                 }
               }
