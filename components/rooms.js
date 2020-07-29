@@ -52,7 +52,7 @@ export default function Rooms() {
                 grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : 'auto'};
               }
 
-              .images > :global(figure):nth-last-child(1):nth-child(even) {
+              .images > :global(figure):nth-last-child(1):nth-child(odd) {
                 grid-column: 2;
               }
 
