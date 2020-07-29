@@ -46,6 +46,9 @@ export default function Rooms() {
                 justify-content: space-around;
                 align-items: center;
               }
+              .info > h5 {
+                flex: 1;
+              }
 
               .images {
                 display: grid;
