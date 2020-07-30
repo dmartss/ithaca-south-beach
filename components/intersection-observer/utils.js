@@ -1,22 +1,16 @@
-export function isDOMNode(node) {
-  return node && Object.prototype.hasOwnProperty.call(node, 'getBoundingClientRect')
-}
+export const isDOMNode = node =>
+  node && Object.prototype.hasOwnProperty.call(node, 'getBoundingClientRect')
 
-export function parseOptions(options = {}) {
-  return {
-    root: options.root || null,
-    rootMargin: parseRootMargin(options.rootMargin),
-    threshold: parseThreshold(options.threshold)
-  }
-}
+export const parseOptions = (options = {}) => ({
+  root: options.root || null,
+  rootMargin: parseRootMargin(options.rootMargin),
+  threshold: parseThreshold(options.threshold)
+})
 
-export function hasEqualOptions(observer, options) {
-  return (
-    equalPair(options.root, observer.root) &&
-    equalPair(options.rootMargin, observer.rootMargin) &&
-    equalPair(options.threshold, observer.thresholds)
-  )
-}
+export const hasEqualOptions = (observer, options) =>
+  equalPair(options.root, observer.root) &&
+  equalPair(options.rootMargin, observer.rootMargin) &&
+  equalPair(options.threshold, observer.thresholds)
 
 function parseRootMargin(rootMargin) {
   const margins = (rootMargin || '0px').trim().split(/\s+/)
@@ -33,9 +27,8 @@ function validateRootMargin(margin) {
   }
 }
 
-function parseThreshold(threshold) {
-  return !Array.isArray(threshold) ? [typeof threshold !== 'undefined' ? threshold : 0] : threshold
-}
+const parseThreshold = threshold =>
+  !Array.isArray(threshold) ? [typeof threshold !== 'undefined' ? threshold : 0] : threshold
 
 function equalPair(optionA, optionB) {
   if (Array.isArray(optionA) && Array.isArray(optionB)) {
