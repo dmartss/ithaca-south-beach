@@ -29,10 +29,12 @@ function Navbar() {
         </div>
 
         <div className="links">
-          <div className="hotel">
-            <p style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</p>
-            <p style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</p>
-          </div>
+          <Link href="/">
+            <div className="hotel">
+              <a style={{ color: 'var(--accents-1)' }}>{NAME_SHORT.toUpperCase()}</a>
+              <a style={{ color: 'var(--accents-3)' }}>{NAME_LONG.toLowerCase()}</a>
+            </div>
+          </Link>
 
           <Link href="/">
             <a className="logo">
@@ -52,6 +54,11 @@ function Navbar() {
           <Link href="/photos">
             <a className={cn('mute', { selected: route.startsWith('/photos') })} title="Photos">
               Photos
+            </a>
+          </Link>
+          <Link href="/specials">
+            <a className={cn('mute', { selected: route.startsWith('/specials') })} title="Specials">
+              Specials
             </a>
           </Link>
           <div className="book">
@@ -84,11 +91,9 @@ function Navbar() {
         .links a {
           text-decoration: none;
           transition: color 0.2s ease;
-          flex: 1;
         }
 
         .links .hotel {
-          line-height: 0.5;
           margin-right: -2rem;
           overflow: hidden;
           white-space: nowrap;
