@@ -19,9 +19,9 @@ export default function SpecialsSection({ description, reverse, children, specia
             justify-content: center;
           }
           .content :global(a) {
-            background-color: var(--accents-1);
+            background-color: var(--accents-3);
             color: var(--white);
-            border: 1px solid var(--accents-1);
+            border: 1px solid var(--accents-3);
             padding: var(--gap-quarter) var(--gap);
             margin: 0;
             align-self: center;
@@ -29,7 +29,7 @@ export default function SpecialsSection({ description, reverse, children, specia
           .content :global(a:focus),
           .content :global(a:hover) {
             background-color: transparent;
-            color: var(--accents-1);
+            color: var(--accents-3);
           }
           @media screen and (max-width: 960px) {
             .main {
