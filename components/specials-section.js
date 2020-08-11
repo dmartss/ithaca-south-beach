@@ -13,10 +13,11 @@ export default function SpecialsSection({ description, reverse, children, specia
             margin-top: var(--gap-double);
           }
           .content {
-            margin: ${reverse ? `2rem var(--gap-triple) 0 0` : `2rem 0 0 var(--gap-triple)`};
+            margin: ${reverse ? `0 var(--gap-triple) 0 0` : `0 0 0 var(--gap-triple)`};
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
           }
           .content :global(a) {
             background-color: var(--accents-3);
