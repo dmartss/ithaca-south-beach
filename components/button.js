@@ -34,11 +34,11 @@ const cachedStyles = css`
     border-radius: var(--radius);
     background-color: var(--accents-3);
     box-shadow: 0 4px 14px 0 rgba(239, 170, 156, 0.39);
-    color: white;
   }
   .btn.invert:hover {
+    color: var(--accents-3);
     background: var(--accents-1);
-    box-shadow: 0 6px 20px rgba(239, 170, 156, 0.23);
+    box-shadow: 0 4px 14px rgba(239, 170, 156, 0.9);
   }
   .btn.invert:active {
     background: var(--accents-1);
@@ -52,7 +52,7 @@ const cachedStyles = css`
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 6px 20px rgba(93, 93, 93, 0.23);
   }
-  .btn.small {
+  /* .btn.small {
     font-size: 0.875rem;
     height: 1.5rem;
     padding: 0 0.75rem;
@@ -73,7 +73,7 @@ const cachedStyles = css`
   }
   .btn > .loading-dots {
     position: absolute;
-  }
+  } */
 `
 
 export default withPure(function Button({

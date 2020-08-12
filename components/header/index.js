@@ -19,7 +19,6 @@ const Header = ({ sticky = true }) => {
           width: 100%;
           background: var(--accents-4);
           z-index: 1000;
-          border-bottom: 1px solid var(--accents-4);
         }
         header.sticky {
           position: sticky;
