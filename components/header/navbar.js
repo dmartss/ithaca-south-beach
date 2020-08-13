@@ -94,15 +94,13 @@ function Navbar() {
           z-index: 1;
         }
 
+        .links .hotel {
+          white-space: nowrap;
+        }
+
         .links a {
           text-decoration: none;
           transition: color 0.2s ease;
-        }
-
-        .links .hotel {
-          margin-right: -2rem;
-          overflow: hidden;
-          white-space: nowrap;
         }
 
         .links a:hover {
