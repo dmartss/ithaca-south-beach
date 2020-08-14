@@ -74,13 +74,13 @@ body {
 }
 
 ::selection {
-  background-color: var(--accents-1);
+  background-color: var(--accents-3);
   color: var(--white);
 }
-.mute {
+.fp {
   color: var(--accents-1);
 }
-.subtitle {
+.fs {
   color: var(--accents-3);
 }
 
@@ -169,16 +169,6 @@ a[role='button'] {
   -khtml-user-select: none;
   user-select: none;
 }
-.no-tap-highlight,
-a {
-  -webkit-touch-callout: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.no-tap-callout {
-  -webkit-touch-callout: none;
-}
 .no-drag {
   user-drag: none;
   user-select: none;
@@ -186,16 +176,6 @@ a {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  position: absolute;
 }
 
 img {
@@ -205,27 +185,6 @@ img {
   display: block;
 }
 
-.f0 {
-  font-size: 1.802032470703125em;
-}
-.f1 {
-  font-size: 1.601806640625em;
-}
-.f2 {
-  font-size: 1.423828125em;
-}
-.f3 {
-  font-size: 1.265625em;
-}
-.f4 {
-  font-size: 1.125em;
-}
-.f5 {
-  font-size: 0.8888888888888888em;
-}
-.f6 {
-  font-size: 0.7901234567901234em;
-}
 .fw1 {
   font-weight: 100;
 }
@@ -237,19 +196,4 @@ img {
 }
 .fw4 {
   font-weight: 400;
-}
-.fw5 {
-  font-weight: 500;
-}
-.fw6 {
-  font-weight: 600;
-}
-.fw7 {
-  font-weight: 700;
-}
-.fw8 {
-  font-weight: 800;
-}
-.fw9 {
-  font-weight: 900;
 }
