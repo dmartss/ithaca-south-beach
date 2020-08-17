@@ -47,7 +47,7 @@ export default function SpecialsSection({
       <div className="content">
         <h2 className="fs fw4">{special}</h2>
         <p className="f-reset fp fw4">{description}</p>
-        <Button invert href={REZTRIP_URL}>
+        <Button invert target="_blank" href={REZTRIP_URL}>
           Book
         </Button>
       </div>
