@@ -1,7 +1,11 @@
 {
   "name": "ithaca-south-beach",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Ithaca Homepage",
+  "repository": "dmartss/ithaca-south-beach",
+  "author": "Dan Martin",
+  "homepage": "https://ithacasouthbeach.com",
+  "license": "MIT",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
