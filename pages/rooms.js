@@ -9,7 +9,7 @@ const imgHeight = 200
 export default function Rooms() {
   return (
     <Page title="Rooms">
-      <Container role="main" wide dotBackground>
+      <Container role="main" dotBackground>
         <Container center padding>
           {rooms.map(
             ({ name, type, occupancy, quantity, description, images }) =>
@@ -53,23 +53,14 @@ export default function Rooms() {
                     .info > h5 {
                       flex: 1;
                     }
-
                     .images {
-                      display: grid;
-                      grid-template-columns: ${images.length >= 3 ? 'repeat(3, 1fr)' : '1fr 1fr'};
+                      display: flex;
+                      justify-content: space-around;
+                      align-items: center;
+                      flex-wrap: wrap;
                     }
-
-                    .images > :global(figure):nth-last-child(1):nth-child(odd) {
-                      grid-column: 2;
-                    }
-
-                    @media (max-width: 960px) {
-                      .images {
-                        grid-template-columns: 1fr;
-                      }
-                      .images > :global(figure):nth-last-child(1):nth-child(odd) {
-                        grid-column: 1;
-                      }
+                    .images > :global(figure) {
+                      flex: 1;
                     }
                   `}</style>
                 </div>
