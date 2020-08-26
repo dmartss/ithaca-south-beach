@@ -33,6 +33,7 @@ const cachedStyles = css`
     line-height: 2.8rem;
     border-radius: var(--radius);
     background-color: var(--accents-3);
+    color: var(--white);
     box-shadow: 0 4px 14px 0 rgba(239, 170, 156, 0.39);
   }
   .btn.invert:hover {
