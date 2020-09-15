@@ -21,7 +21,6 @@
 .links a {
   text-decoration: none;
   transition: color 0.2s ease;
-  flex: 1;
 }
 
 .links a:hover {

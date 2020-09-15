@@ -20,7 +20,8 @@
   align-self: center;
 }
 @media screen and (max-width: 960px) {
-  .main {
+  .main,
+  .main.reverse {
     flex-direction: column;
     text-align: center;
   }
