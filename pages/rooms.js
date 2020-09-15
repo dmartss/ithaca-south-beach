@@ -15,13 +15,13 @@ export default function Rooms() {
             ({ name, type, occupancy, quantity, description, images }) =>
               description && (
                 <div className="room" key={name}>
-                  <h3 className="fp fw3">{name}</h3>
-                  <div className="info fs">
+                  <h3 className="fs fw3">{name}</h3>
+                  <div className="info fp">
                     <h5 className="fw3">Type: {type}</h5>
                     <h5 className="fw3">Occupancy: {occupancy}</h5>
                     <h5 className="fw3"># of Rooms: {quantity}</h5>
                   </div>
-                  <h5 className="fp fw4">{description}</h5>
+                  <h5 className="fs fw4">{description}</h5>
                   <div className="images">
                     {images.map(({ src, alt }) => (
                       <Image

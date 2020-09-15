@@ -15,9 +15,9 @@ export default function Specials() {
             description={`Attitude-Free Pricing & Packages`}
           />
           <div className="paragraph">
-            <p className="fp">{TEXT[0]}</p>
-            <p className="fp">{TEXT[1]}</p>
-            <p className="fp">{TEXT[2]}</p>
+            <p className="fs">{TEXT[0]}</p>
+            <p className="fs">{TEXT[1]}</p>
+            <p className="fs">{TEXT[2]}</p>
           </div>
           <SpecialsSection
             special={SPECIALS[0]}

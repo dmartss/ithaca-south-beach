@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import cn from 'classnames'
 import css from 'styled-jsx/css'
-import withPure from 'components/hoc/pure'
+import { memo } from 'react'
 
 const cachedStyles = css`
   .btn {
@@ -77,7 +77,7 @@ const cachedStyles = css`
   } */
 `
 
-export default withPure(function Button({
+export default memo(function Button({
   children,
   invert,
   outline,
