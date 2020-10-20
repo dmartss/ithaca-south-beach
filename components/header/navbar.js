@@ -81,7 +81,7 @@ function Navbar() {
           </Link>
           <a
             className="fs"
-            href="https://ariesliving.com/terms-and-conditions"
+            href="https://ariesliving.com/terms-and-conditions?utm_source=ithaca-south-beach&utm_medium=homepage-header&utm_campaign=ithaca"
             target="_blank"
             rel="noopener noreferrer"
             title="Terms"
