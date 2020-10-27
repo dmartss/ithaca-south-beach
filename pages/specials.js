@@ -12,7 +12,7 @@ export default function Specials() {
           <SectionHeader
             id="specials"
             title="Specials"
-            description={`Attitude-Free Pricing & Packages`}
+            description="Attitude-Free Pricing & Packages"
           />
           <div className="paragraph">
             <p className="fs">{TEXT[0]}</p>
@@ -24,8 +24,6 @@ export default function Specials() {
             description={DESCRIPTIONS[0]}
             alt="Room 2"
             src="/showcase-thumbnails/rooms/cks/7.jpg"
-            width={3000 / 6}
-            height={2000 / 6}
           />
           <SpecialsSection
             reverse
@@ -33,16 +31,12 @@ export default function Specials() {
             description={DESCRIPTIONS[1]}
             alt="Room 3"
             src="/showcase-thumbnails/rooms/sk/3.jpg"
-            width={3000 / 6}
-            height={2000 / 6}
           />
           <SpecialsSection
             special={SPECIALS[2]}
             description={DESCRIPTIONS[2]}
             alt="Room 3"
             src="/showcase-thumbnails/rooms/sk/10.jpg"
-            width={3000 / 6}
-            height={2000 / 6}
           />
         </Container>
       </Container>

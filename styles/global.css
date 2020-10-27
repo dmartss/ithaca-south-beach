@@ -83,6 +83,14 @@ body {
   color: var(--accents-3);
 }
 
+.image.radius {
+  border-radius: var(--radius);
+}
+
+.image.shadow {
+  box-shadow: var(--shadow-hover);
+}
+
 ::selection {
   background-color: var(--accents-3);
   color: var(--white);
@@ -157,13 +165,6 @@ a[role='button'] {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-
-img {
-  max-width: 100%;
-  width: auto;
-  margin: auto;
-  display: block;
 }
 
 .fw1 {

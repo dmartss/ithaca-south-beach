@@ -1,10 +1,7 @@
 import Container from 'components/container'
-import Image from 'components/image'
+import Image from 'next/image'
 import Page from 'components/page'
 import rooms from 'lib/rooms'
-
-const imgWidth = 300
-const imgHeight = 200
 
 export default function Rooms() {
   return (
@@ -17,23 +14,20 @@ export default function Rooms() {
                 <div className="room" key={name}>
                   <h3 className="fs fw3">{name}</h3>
                   <div className="info fp">
-                    <h5 className="fw3">Type: {type}</h5>
-                    <h5 className="fw3">Occupancy: {occupancy}</h5>
-                    <h5 className="fw3"># of Rooms: {quantity}</h5>
+                    <h5 className="fw4">Type: {type}</h5>
+                    <h5 className="fw4">Occupancy: {occupancy}</h5>
+                    <h5 className="fw4"># of Rooms: {quantity}</h5>
                   </div>
                   <h5 className="fs fw4">{description}</h5>
                   <div className="images">
                     {images.map(({ src, alt }) => (
                       <Image
                         key={src}
-                        className="no-drag"
-                        margin={10}
-                        shadow
+                        className="image shadow radius"
                         src={src}
                         alt={alt}
-                        width={imgWidth}
-                        height={imgHeight}
-                        layout="responsive"
+                        width={300}
+                        height={200}
                       />
                     ))}
                   </div>
@@ -54,13 +48,10 @@ export default function Rooms() {
                       flex: 1;
                     }
                     .images {
-                      display: flex;
-                      justify-content: space-around;
-                      align-items: center;
-                      flex-wrap: wrap;
-                    }
-                    .images > :global(figure) {
-                      flex: 1;
+                      display: grid;
+                      grid-template-columns: repeat(3, 1fr);
+                      grid-row-gap: 20px;
+                      grid-column-gap: 10px;
                     }
                   `}</style>
                 </div>

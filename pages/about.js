@@ -1,7 +1,7 @@
 import SectionHeader from 'components/section-header'
 import { NAME, TEXT } from 'lib/constants'
 import Container from 'components/container'
-import Image from 'components/image'
+import Image from 'next/image'
 import Page from 'components/page'
 
 export default function About() {
@@ -11,9 +11,7 @@ export default function About() {
         <Container center padding>
           <SectionHeader id="about" title={`About ${NAME[0]}`} description={TEXT[0]} />
           <Image
-            shadow
-            className="no-drag"
-            oversize={false}
+            className="image shadow radius"
             alt="Room 1"
             src="/showcase/entrance/1.jpg"
             width={3000 / 3.25}
