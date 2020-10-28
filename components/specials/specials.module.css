@@ -7,7 +7,7 @@
 .main {
   position: relative;
   display: flex;
-  margin: var(--gap-triple) 0;
+  margin: var(--small-gap) 0;
   flex-direction: row;
 }
 .main.reverse {

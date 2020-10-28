@@ -1,6 +1,6 @@
 import { SPECIALS, DESCRIPTIONS, TEXT } from 'lib/constants'
 import SpecialsSection from './specials-section'
-import SectionHeader from 'components/section-header'
+import SectionHeader from 'components/section/section-header'
 import styles from './specials.module.css'
 
 export default function Specials() {
