@@ -20,20 +20,20 @@ export default function Specials() {
         special={SPECIALS[0]}
         description={DESCRIPTIONS[0]}
         alt="Room 2"
-        src="/showcase-thumbnails/rooms/cks/7.jpg"
+        src="/showcase-thumbnails/cks - 7.jpg"
       />
       <SpecialsSection
         reverse
         special={SPECIALS[1]}
         description={DESCRIPTIONS[1]}
         alt="Room 3"
-        src="/showcase-thumbnails/rooms/sk/3.jpg"
+        src="/showcase-thumbnails/sk - 3.jpg"
       />
       <SpecialsSection
         special={SPECIALS[2]}
         description={DESCRIPTIONS[2]}
         alt="Room 3"
-        src="/showcase-thumbnails/rooms/sk/10.jpg"
+        src="/showcase-thumbnails/sk - 10.jpg"
       />
     </>
   )
