@@ -20,13 +20,18 @@ export const getStaticProps = () => {
   const images = fs
     .readdirSync('./public/showcase-thumbnails/')
     .filter(file => path.extname(file) === '.jpg')
-    .filter(file => {
-      if (file.startsWith('cks -')) return file
-      if (file.startsWith('dqs -')) return file
-      if (file.startsWith('sk -')) return file
-      if (file.startsWith('sq -')) return file
-      else return
-    })
+    .reduce(
+      (prev, curr) => [
+        ...prev,
+        ...(curr.startsWith('cks -') ||
+        curr.startsWith('dqs -') ||
+        curr.startsWith('sq -') ||
+        curr.startsWith('sk -')
+          ? [curr]
+          : [])
+      ],
+      []
+    )
   return {
     props: { images }
   }
