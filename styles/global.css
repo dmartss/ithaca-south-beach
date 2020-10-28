@@ -21,8 +21,11 @@
   --accents-6: #888888;
   --accents-7: #666666;
   --accents-8: #333;
-  --white: #ffffff;
-  --black: #000000;
+
+  --light-gray: #f1f1f1;
+  --white: #fff;
+  --black: #000;
+
   --header-border-bottom: 1px solid #eaeaea;
 
   /* Typography */
