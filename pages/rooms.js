@@ -17,21 +17,17 @@ export default function RoomsPage({ images }) {
 }
 
 export const getStaticProps = () => {
+  const matches = ['cks -', 'dqs -', 'sq -', 'sk -']
   const images = fs
     .readdirSync('./public/showcase-thumbnails/')
     .filter(file => path.extname(file) === '.jpg')
-    .reduce(
-      (prev, curr) => [
-        ...prev,
-        ...(curr.startsWith('cks -') ||
-        curr.startsWith('dqs -') ||
-        curr.startsWith('sq -') ||
-        curr.startsWith('sk -')
-          ? [curr]
-          : [])
-      ],
-      []
-    )
+    .reduce((prev, curr) => {
+      matches.forEach(match => {
+        if (curr.includes(match)) prev.push(curr)
+      })
+      return prev
+    }, [])
+
   return {
     props: { images }
   }
